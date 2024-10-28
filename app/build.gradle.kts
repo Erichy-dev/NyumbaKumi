@@ -16,8 +16,8 @@ android {
         applicationId = "com.erichydev.nyumbakumi"
         minSdk = 24
         targetSdk = 34
-        versionCode = 19
-        versionName = "3.2.1"
+        versionCode = 22
+        versionName = "4.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,7 +51,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -116,11 +115,6 @@ dependencies {
 
     implementation(libs.google.dagger.compiler)
     ksp(libs.google.dagger.compiler)
-
-    // media player
-    implementation(libs.androidx.media3.exoplayer)
-    implementation(libs.androidx.media3.exoplayer.dash)
-    implementation(libs.androidx.media3.ui)
 
     // admob
     implementation(libs.play.services.ads)

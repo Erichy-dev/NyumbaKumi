@@ -31,7 +31,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import androidx.activity.viewModels
 import com.erichydev.nyumbakumi.homeComposables.HomeViewModel
@@ -42,10 +41,8 @@ import com.erichydev.nyumbakumi.screens.SignIn
 import com.erichydev.nyumbakumi.ui.theme.NormalTheme
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
-import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import kotlinx.coroutines.delay
@@ -297,7 +294,7 @@ fun StartAdBackgroundTask(
         while(!adStatus) {
             println("adStatus : false ; no ads available. retrying ...")
             loadInterstitialAd { setAdStatus(it) }
-            delay(1000)
+            delay(5000)
         }
     }
 }

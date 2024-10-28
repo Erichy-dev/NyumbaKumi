@@ -137,6 +137,7 @@ fun Home(
                                     loadInterstitialAd {
                                         setAdStatus(it)
                                     }
+                                    onPlotClick(plot.plotNumber)
                                 } else {
                                     displayAd = true
                                 }
